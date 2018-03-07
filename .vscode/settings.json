@@ -1,9 +1,3 @@
 {
-  "eslint.packageManager": "yarn",
-  "files.exclude": {
-    "**/*.js": { "when": "$(basename).ts" },
-    "**/**.js": { "when": "$(basename).tsx" },
-    "**/*.jsx": { "when": "$(basename).ts" },
-    "**/**.jsx": { "when": "$(basename).tsx" }
-  }
+  "eslint.packageManager": "yarn"
 }
