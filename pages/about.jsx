@@ -1,5 +1,5 @@
-import React from 'react';
-export default () => (<div>
+import Layout from '../components/my-layout';
+export default () => (<Layout>
     <p>This is the about page</p>
-  </div>);
+  </Layout>);
 //# sourceMappingURL=about.jsx.map

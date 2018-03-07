@@ -1,7 +1,7 @@
-import React from 'react';
+import Layout from '../components/my-layout';
 
 export default () => (
-  <div>
+  <Layout>
     <p>This is the about page</p>
-  </div>
+  </Layout>
 );

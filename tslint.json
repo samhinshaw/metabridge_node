@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "no-submodule-imports": {
+      "options": ["next/link"]
+    },
+    "interface-name": [true, "never-prefix"]
+  }
+}
