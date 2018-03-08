@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { shape } from 'prop-types';
 import NavBar from './nav-bar';
 
 const Layout = props => (
@@ -10,11 +10,11 @@ const Layout = props => (
 );
 
 Layout.propTypes = {
-  children: arrayOf(shape({}))
+  children: shape({})
 };
 
 Layout.defaultProps = {
-  children: [{}]
+  children: {}
 };
 
 export default Layout;
