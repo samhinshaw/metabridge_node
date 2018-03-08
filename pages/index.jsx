@@ -1,28 +1,55 @@
-import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
+import { shape, string } from 'prop-types';
 import Layout from '../components/my-layout';
 
-const Index = props => (
+function getPosts() {
+  return [
+    { id: 'hello-nextjs', title: 'Hello Next.js' },
+    { id: 'learn-nextjs', title: 'Learn Next.js is awesome' },
+    { id: 'deploy-nextjs', title: 'Deploy apps with ZEIT' }
+  ];
+}
+
+const PostLink = props => (
+  <li>
+    <Link as={`/p/${props.post.id}`} href={`/post?title=${props.post.title}`}>
+      <a>{props.post.title}</a>
+    </Link>
+  </li>
+);
+
+PostLink.propTypes = {
+  post: shape({
+    id: string.isRequired,
+    title: string.isRequired
+  }).isRequired
+};
+
+// class PostLink extends Component {
+//   static propTypes = {
+//     key: string.isRequired,
+//     post: shape({
+//       id: string.isRequired,
+//       title: string.isRequired
+//     }).isRequired
+//   };
+//   render() {
+//     return (
+//       <li>
+//         <Link as={`/p/${this.props.post.id}`} href={`/post?title=${this.props.post.title}`}>
+//           <a>{this.props.post.title}</a>
+//         </Link>
+//       </li>
+//     );
+//   }
+// }
+
+const HomePage = () => (
   <Layout>
-    <h1>Batman TV Shows</h1>
-    <ul>
-      {props.shows.map(show => (
-        <li key={show.id}>
-          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-            <a>{show.name}</a>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <h1>My Blog</h1>
+    <ul>{getPosts().map(post => <PostLink key={post.id} post={post} />)}</ul>
   </Layout>
 );
-Index.getInitialProps = async () => {
-  const response = await axios.get('https://api.tvmaze.com/search/shows?q=batman');
-  console.log(`Show data fetched. Count: ${response.data.length}`);
-  return {
-    shows: response.data
-  };
-};
-export default Index;
-// # sourceMappingURL=index.jsx.map
+
+export default HomePage;

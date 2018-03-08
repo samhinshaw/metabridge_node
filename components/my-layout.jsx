@@ -1,12 +1,20 @@
-import Header from './header';
-const layoutStyle = {
-    margin: 20,
-    padding: 20,
-    border: '1px solid #DDD'
-};
-const Layout = props => (<div style={layoutStyle}>
-    <Header />
+import React from 'react';
+import { arrayOf, shape } from 'prop-types';
+import NavBar from './nav-bar';
+
+const Layout = props => (
+  <div>
+    <NavBar />
     {props.children}
-  </div>);
+  </div>
+);
+
+Layout.propTypes = {
+  children: arrayOf(shape({}))
+};
+
+Layout.defaultProps = {
+  children: [{}]
+};
+
 export default Layout;
-//# sourceMappingURL=my-layout.jsx.map

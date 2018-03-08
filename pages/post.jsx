@@ -1,10 +1,32 @@
+// import axios from 'axios';
 import React from 'react';
+import { shape, string } from 'prop-types';
 import Layout from '../components/my-layout';
 
-export default props => (
+const Post = props => (
   <Layout>
     <h1>{props.url.query.title}</h1>
-    <p>This is the blog post content.</p>
+    <div>
+      <p>Hello World!</p>
+    </div>
   </Layout>
 );
-// # sourceMappingURL=post.jsx.map
+
+Post.propTypes = {
+  url: shape({
+    query: shape({
+      url: string.isRequired
+    }).isRequired
+  }).isRequired
+};
+
+// If was not required
+// Post.defaultProps = {
+//   url: {
+//     query: {
+//       title: 'Hello World!'
+//     }
+//   }
+// };
+
+export default Post;
