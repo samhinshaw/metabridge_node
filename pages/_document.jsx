@@ -33,7 +33,7 @@ class MyDocument extends Document {
           {/* eslint-disable-next-line react/no-danger */}
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
-        <body>
+        <body id="root">
           <Main />
           <NextScript />
           <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" />

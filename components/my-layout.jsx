@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import NavBar from './nav-bar';
+import NavBar from './navbar';
 
 const Layout = props => (
   <div>
