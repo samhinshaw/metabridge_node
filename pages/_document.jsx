@@ -1,7 +1,23 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+import { renderStaticOptimized, rehydrate } from 'glamor/server';
 
 class MyDocument extends Document {
+  static async getInitialProps({ renderPage }) {
+    const page = renderPage();
+    const styles = renderStaticOptimized(() => page.html);
+    return { ...page, ...styles };
+  }
+
+  constructor(props) {
+    super(props);
+    const { __NEXT_DATA__, ids } = this.props;
+    if (typeof window !== 'undefined') {
+      rehydrate(ids);
+    } else {
+      __NEXT_DATA__.ids = ids;
+    }
+  }
   render() {
     return (
       <html lang="en-US">
@@ -14,6 +30,8 @@ class MyDocument extends Document {
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#303e4e" />
           <link name="theme-color" content="#303e4e" />
+          {/* eslint-disable-next-line react/no-danger */}
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
           <Main />
