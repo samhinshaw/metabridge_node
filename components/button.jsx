@@ -11,6 +11,7 @@ const Button = props => {
       </span>
     );
   }
+  // Otherwise, icon is `undefined` and React won't render that
   return (
     <p className="control">
       <Link href={props.link}>

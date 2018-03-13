@@ -3,6 +3,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 // import { shape, string } from 'prop-types';
 import Layout from '../components/my-layout';
+import RadioButton from '../components/radio-button';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({
@@ -21,9 +22,24 @@ const FileUpload = glamorous.div({
   marginBottom: '24px'
 });
 
-const RadioLabel = glamorous.span({
-  marginLeft: '5px'
-});
+const fileSeparators = {
+  groupName: 'separator',
+  initiallyChecked: 'commaSep',
+  options: [
+    {
+      optionName: 'Comma',
+      id: 'commaSep'
+    },
+    {
+      optionName: 'Tab',
+      id: 'tabSep'
+    },
+    {
+      optionName: 'Semicolon',
+      id: 'semicolonSep'
+    }
+  ]
+};
 
 const Upload = () => (
   <Layout>
@@ -61,21 +77,16 @@ const Upload = () => (
                   <div className="field">
                     <label htmlFor="separator">
                       <strong>Separator</strong>
+                      <div className="control" id="separator">
+                        {fileSeparators.options.map(option => (
+                          <RadioButton
+                            groupName={fileSeparators.groupName}
+                            {...option}
+                            key={option.id}
+                          />
+                        ))}
+                      </div>
                     </label>
-                    <div className="control" id="separator">
-                      <label className="radio" htmlFor="commaSep">
-                        <input type="radio" name="separator" id="commaSep" />
-                        <RadioLabel>Comma</RadioLabel>
-                      </label>
-                      <label className="radio" htmlFor="tabSep">
-                        <input type="radio" name="separator" id="tabSep" />
-                        <RadioLabel>Tab</RadioLabel>
-                      </label>
-                      <label className="radio" htmlFor="semiSep">
-                        <input type="radio" name="separator" id="semiSep" />
-                        <RadioLabel>Semicolon</RadioLabel>
-                      </label>
-                    </div>
                   </div>
                 </form>
               </div>
