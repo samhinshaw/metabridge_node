@@ -1,13 +1,21 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import NavBar from './navbar';
+// make glamorous styling most important
+// only need to do this at document root! :)
+import '../components/style-importance';
 
-const Layout = props => (
-  <div>
-    <NavBar />
-    {props.children}
-  </div>
-);
+const Layout = props => {
+  if (props.children.props.id === 'welcomeHero') {
+    return <div>{props.children}</div>;
+  }
+  return (
+    <div>
+      <NavBar />
+      {props.children}
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: shape({})

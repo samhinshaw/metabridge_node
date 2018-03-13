@@ -3,7 +3,6 @@ import React from 'react';
 import glamorous from 'glamorous';
 // import { shape, string } from 'prop-types';
 import Layout from '../components/my-layout';
-import '../components/style-importance';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({

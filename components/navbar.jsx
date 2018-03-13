@@ -2,9 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { string, arrayOf, shape } from 'prop-types';
+import glamorous from 'glamorous';
 import 'bulma/css/bulma.css';
 import { mainMenuItems, endMenuButtons } from './navbar-items';
 import Button from './button';
+
+// Since we're putting a dark navbar within a light hero, we need to override
+// the .hero .nav {background: none;} styling
+const DarkNav = glamorous.nav({
+  backgroundColor: '#363636'
+});
 
 class NavBar extends React.Component {
   state = {
@@ -27,7 +34,7 @@ class NavBar extends React.Component {
   };
   render() {
     return (
-      <nav className="navbar is-dark">
+      <DarkNav className="navbar is-dark">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
             <img
@@ -82,7 +89,7 @@ class NavBar extends React.Component {
             </div>
           </div>
         </div>
-      </nav>
+      </DarkNav>
     );
   }
 }

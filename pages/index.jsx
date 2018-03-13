@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import glamorous from 'glamorous';
 // import { shape, string } from 'prop-types';
+import NavBar from '../components/navbar';
 import Layout from '../components/my-layout';
 import Button from '../components/button';
 
@@ -20,7 +21,10 @@ const HeroButtonContainer = glamorous.div({
 
 const HomePage = () => (
   <Layout>
-    <section className="hero is-light is-fullheight">
+    <section className="hero is-light is-fullheight" id="welcomeHero">
+      <div className="hero-head">
+        <NavBar />
+      </div>
       <div className="hero-body">
         <HeroContainer className="container">
           <h1 className="title is-size-1">MetaBridge</h1>
