@@ -3,7 +3,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 // import { shape, string } from 'prop-types';
 import Layout from '../components/my-layout';
-import RadioButton from '../components/radio-button';
+import RadioButtons from '../components/radio-buttons';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({
@@ -27,15 +27,15 @@ const fileSeparators = {
   initiallyChecked: 'commaSep',
   options: [
     {
-      optionName: 'Comma',
+      name: 'Comma',
       id: 'commaSep'
     },
     {
-      optionName: 'Tab',
+      name: 'Tab',
       id: 'tabSep'
     },
     {
-      optionName: 'Semicolon',
+      name: 'Semicolon',
       id: 'semicolonSep'
     }
   ]
@@ -78,13 +78,7 @@ const Upload = () => (
                     <label htmlFor="separator">
                       <strong>Separator</strong>
                       <div className="control" id="separator">
-                        {fileSeparators.options.map(option => (
-                          <RadioButton
-                            groupName={fileSeparators.groupName}
-                            {...option}
-                            key={option.id}
-                          />
-                        ))}
+                        <RadioButtons {...fileSeparators} />
                       </div>
                     </label>
                   </div>
