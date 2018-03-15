@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { string, arrayOf, shape } from 'prop-types';
 import glamorous from 'glamorous';
-import 'bulma/css/bulma.css';
 import { mainMenuItems, endMenuButtons } from './navbar-items';
 import Button from './button';
 

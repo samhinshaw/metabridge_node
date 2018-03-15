@@ -1,6 +1,5 @@
 {
   "presets": [
-    "next/babel",
     [
       "env",
       {
@@ -10,12 +9,16 @@
         "loose": true,
         "modules": false
       }
-    ]
+    ],
+    "next/babel"
   ],
   "plugins": ["transform-class-properties"],
   "env": {
     "graphql": {
       "plugins": ["transform-es2015-modules-commonjs"]
+    },
+    "test": {
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
     }
   }
 }

@@ -12,7 +12,8 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
-    node: true
+    node: true,
+    jest: true
   },
   rules: {
     // Because of Next's weird way to render Link elements

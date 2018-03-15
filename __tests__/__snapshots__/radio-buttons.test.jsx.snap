@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RadioButtons
+    groupName="separator"
+    initiallyChecked="commaSep"
+    options={
+      Array [
+        Object {
+          "id": "commaSep",
+          "name": "Comma",
+        },
+        Object {
+          "id": "tabSep",
+          "name": "Tab",
+        },
+        Object {
+          "id": "semicolonSep",
+          "name": "Semicolon",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "Component": "div",
+      "children": Array [
+        <label
+          className="radio"
+          htmlFor="commaSep"
+        >
+          <Radio
+            id="commaSep"
+            value="commaSep"
+          />
+          <glamorous(span)>
+            Comma
+          </glamorous(span)>
+        </label>,
+        <label
+          className="radio"
+          htmlFor="tabSep"
+        >
+          <Radio
+            id="tabSep"
+            value="tabSep"
+          />
+          <glamorous(span)>
+            Tab
+          </glamorous(span)>
+        </label>,
+        <label
+          className="radio"
+          htmlFor="semicolonSep"
+        >
+          <Radio
+            id="semicolonSep"
+            value="semicolonSep"
+          />
+          <glamorous(span)>
+            Semicolon
+          </glamorous(span)>
+        </label>,
+      ],
+      "name": "separator",
+      "onChange": [Function],
+      "selectedValue": "commaSep",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "commaSep",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Radio
+              id="commaSep"
+              value="commaSep"
+            />,
+            <glamorous(span)>
+              Comma
+            </glamorous(span)>,
+          ],
+          "className": "radio",
+          "htmlFor": "commaSep",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "commaSep",
+              "value": "commaSep",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Comma",
+            },
+            "ref": null,
+            "rendered": "Comma",
+            "type": [Function],
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": "tabSep",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Radio
+              id="tabSep"
+              value="tabSep"
+            />,
+            <glamorous(span)>
+              Tab
+            </glamorous(span)>,
+          ],
+          "className": "radio",
+          "htmlFor": "tabSep",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "tabSep",
+              "value": "tabSep",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Tab",
+            },
+            "ref": null,
+            "rendered": "Tab",
+            "type": [Function],
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": "semicolonSep",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Radio
+              id="semicolonSep"
+              value="semicolonSep"
+            />,
+            <glamorous(span)>
+              Semicolon
+            </glamorous(span)>,
+          ],
+          "className": "radio",
+          "htmlFor": "semicolonSep",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "semicolonSep",
+              "value": "semicolonSep",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Semicolon",
+            },
+            "ref": null,
+            "rendered": "Semicolon",
+            "type": [Function],
+          },
+        ],
+        "type": "label",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "Component": "div",
+        "children": Array [
+          <label
+            className="radio"
+            htmlFor="commaSep"
+          >
+            <Radio
+              id="commaSep"
+              value="commaSep"
+            />
+            <glamorous(span)>
+              Comma
+            </glamorous(span)>
+          </label>,
+          <label
+            className="radio"
+            htmlFor="tabSep"
+          >
+            <Radio
+              id="tabSep"
+              value="tabSep"
+            />
+            <glamorous(span)>
+              Tab
+            </glamorous(span)>
+          </label>,
+          <label
+            className="radio"
+            htmlFor="semicolonSep"
+          >
+            <Radio
+              id="semicolonSep"
+              value="semicolonSep"
+            />
+            <glamorous(span)>
+              Semicolon
+            </glamorous(span)>
+          </label>,
+        ],
+        "name": "separator",
+        "onChange": [Function],
+        "selectedValue": "commaSep",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "commaSep",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Radio
+                id="commaSep"
+                value="commaSep"
+              />,
+              <glamorous(span)>
+                Comma
+              </glamorous(span)>,
+            ],
+            "className": "radio",
+            "htmlFor": "commaSep",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "commaSep",
+                "value": "commaSep",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Comma",
+              },
+              "ref": null,
+              "rendered": "Comma",
+              "type": [Function],
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": "tabSep",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Radio
+                id="tabSep"
+                value="tabSep"
+              />,
+              <glamorous(span)>
+                Tab
+              </glamorous(span)>,
+            ],
+            "className": "radio",
+            "htmlFor": "tabSep",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "tabSep",
+                "value": "tabSep",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Tab",
+              },
+              "ref": null,
+              "rendered": "Tab",
+              "type": [Function],
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": "semicolonSep",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Radio
+                id="semicolonSep"
+                value="semicolonSep"
+              />,
+              <glamorous(span)>
+                Semicolon
+              </glamorous(span)>,
+            ],
+            "className": "radio",
+            "htmlFor": "semicolonSep",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "semicolonSep",
+                "value": "semicolonSep",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Semicolon",
+              },
+              "ref": null,
+              "rendered": "Semicolon",
+              "type": [Function],
+            },
+          ],
+          "type": "label",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
