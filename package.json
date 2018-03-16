@@ -17,8 +17,7 @@
     "test": "NODE_ENV=test jest",
     "test:coverage": "NODE_ENV=test jest --coverage",
     "test:update": "NODE_ENV=test jest -u",
-    "format":
-      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet"
   },
   "dependencies": {
@@ -42,6 +41,7 @@
     "react-radio-group": "^3.0.2",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
+    "rollbar": "^2.3.9",
     "sequelize": "^4.35.2",
     "webpack": "3.11"
   },
