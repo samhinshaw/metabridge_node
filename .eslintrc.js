@@ -26,5 +26,8 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton']
       }
     ]
+  },
+  globals: {
+    Rollbar: true
   }
 };

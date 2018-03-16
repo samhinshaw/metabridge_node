@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import axios from 'axios';
 // import { shape, string } from 'prop-types';
+import concat from 'concat-stream';
+
 import Layout from '../components/my-layout';
 import RadioButtons from '../components/radio-buttons';
 import fileSeparators from '../components/file-separators';
@@ -25,6 +27,12 @@ const FileUpload = glamorous.div({
   marginBottom: '24px'
 });
 
+const axiosConfig = {
+  // onUploadProgress(progressEvent) {
+  //   const percentCompleted = Math.round(progressEvent.loaded * 100 / progressEvent.total);
+  // }
+};
+
 class Upload extends Component {
   state = {
     fileName: null
@@ -36,16 +44,29 @@ class Upload extends Component {
     if (event.target.files[0]) {
       this.setState({ fileName: event.target.files[0].name });
       // this.setState({ uploadStatus: 'is-success' });
-      // this.sendFileToServer(event.target.files[0]);
-      console.log(event.target.files[0]);
+      // If the user uploaded a TEXT file, use it!
+      if (event.target.files[0].type.startsWith('text/')) {
+        this.uploadFile(event.target.files[0]);
+      } else {
+        // Otherwise, do something to inform user their upload was invalid
+      }
     }
   };
-  sendFileToServer = file => {
-    // file is already an object, so can just send that as a JSON POST
+  uploadFile = file => {
+    const data = new FormData();
+    data.append('file', file);
     axios
-      .post('/upload', file)
-      .then()
-      .catch();
+      .post('/upload', data, axiosConfig)
+      .then(res => {
+        console.log(res);
+        // output.className = 'container';
+        // output.innerHTML = res.data;
+      })
+      .catch(err => {
+        Rollbar.error(err);
+        // output.className = 'container text-danger';
+        // output.innerHTML = err.message;
+      });
   };
   render() {
     return (

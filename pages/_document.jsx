@@ -56,6 +56,7 @@ class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           {/* But <Head> does not render on client side, only server-side? */}
           {/* See: https://github.com/zeit/next.js/issues/808 */}
+          {/* eslint-disable-next-line react/no-danger */}
           <script dangerouslySetInnerHTML={{ __html: rollbarScript }} />
 
           <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" />
