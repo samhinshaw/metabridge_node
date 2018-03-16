@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import Layout from '../components/my-layout';
 import RadioButtons from '../components/radio-buttons';
-import fileSeparators from '../components/file-separators';
+import fileDelimiters from '../component-data/file-delimiters';
 // import DataTableByCol from '../components/data-table-by-col';
 import DataTableByRow from '../components/data-table-by-row';
 // import Button from '../components/button';
@@ -140,7 +140,7 @@ class Upload extends Component {
                         <strong>Separator</strong>
                         <div className="control" id="separator">
                           {/* By specifying a function here, we can take in an argument pass UP from RadioButtons */}
-                          <RadioButtons {...fileSeparators} onChange={this.handleSepChange} />
+                          <RadioButtons {...fileDelimiters} onChange={this.handleSepChange} />
                         </div>
                       </label>
                     </div>

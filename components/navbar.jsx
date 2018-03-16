@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { string, arrayOf, shape } from 'prop-types';
 import glamorous from 'glamorous';
-import { mainMenuItems, endMenuButtons } from './navbar-items';
-import Button from './button';
+import { mainMenuItems /* endMenuButtons */ } from '../component-data/navbar-items';
+// import Button from './button';
 
 // Since we're putting a dark navbar within a light hero, we need to override
 // the .hero .nav {background: none;} styling
@@ -35,6 +35,9 @@ class NavBar extends React.Component {
   tabIsActive = href => {
     if (href === this.props.router.pathname) return 'is-active';
     return '';
+  };
+  clearCurrentSession = () => {
+    alert('Analysis Cleared!');
   };
   render() {
     return (
@@ -88,7 +91,15 @@ class NavBar extends React.Component {
             {/* {endMenuButtons.map(item => <MenuItem {...item} key={item.link} />)} */}
             <div className="navbar-item">
               <div className="field is-grouped">
-                {endMenuButtons.map(button => <Button {...button} key={button.link} />)}
+                <p className="control">
+                  <button className="button is-light" onClick={this.clearCurrentSession}>
+                    <span className="icon">
+                      <i className="fas fa-trash" />
+                    </span>
+                    <span>Clear Current Analysis</span>
+                  </button>
+                </p>
+                {/* {endMenuButtons.map(button => <Button {...button} key={button.link} />)} */}
               </div>
             </div>
           </div>

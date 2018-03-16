@@ -76,14 +76,18 @@ const HomePage = () => (
           </div> */}
           <div className="control">
             <div className="tags has-addons">
-              <span className="tag is-dark">Pathway Tools</span>
-              <span className="tag is-success">21.5</span>
+              <a href="http://brg.ai.sri.com/ptools/">
+                <span className="tag is-dark">Pathway Tools</span>
+                <span className="tag is-success">21.5</span>
+              </a>
             </div>
           </div>
           <div className="control">
             <div className="tags has-addons">
-              <span className="tag is-dark">KEGG</span>
-              <span className="tag is-link">2018-03-14</span>
+              <a href="http://www.genome.jp/kegg/">
+                <span className="tag is-dark">KEGG</span>
+                <span className="tag is-link">2018-03-14</span>
+              </a>
             </div>
           </div>
         </FooterText>
