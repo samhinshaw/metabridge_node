@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import axios from 'axios';
 // import { shape, string } from 'prop-types';
-import concat from 'concat-stream';
 
 import Layout from '../components/my-layout';
 import RadioButtons from '../components/radio-buttons';
 import fileSeparators from '../components/file-separators';
+import DataTableByCol from '../components/data-table';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({
@@ -35,7 +35,9 @@ const axiosConfig = {
 
 class Upload extends Component {
   state = {
-    fileName: null
+    fileName: null,
+    uploadedData: null
+    // file: null,
     // uploadStatus: ''
   };
   handleUpload = event => {
@@ -53,19 +55,22 @@ class Upload extends Component {
     }
   };
   uploadFile = file => {
+    // initialize FormData object
     const data = new FormData();
+    // Then append the file
     data.append('file', file);
+    // And post the multipart/form-data object to the server
     axios
-      .post('/upload', data, axiosConfig)
+      .put('/upload', data, axiosConfig)
       .then(res => {
-        console.log(res);
-        // output.className = 'container';
-        // output.innerHTML = res.data;
+        if (res.data.type === 'success') {
+          // Got a little side-tracked worrying about setting state here...
+          // but having state depend on state is where it gets dangerous!
+          this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
+        }
       })
       .catch(err => {
         Rollbar.error(err);
-        // output.className = 'container text-danger';
-        // output.innerHTML = err.message;
       });
   };
   render() {
@@ -119,6 +124,7 @@ class Upload extends Component {
             </UploadPanel>
             <MainPanel className="tile is-parent is-9">
               {/* <h2 className="title is-size-3">Main Panel</h2> */}
+              <DataTableByCol {...this.state.uploadedData} />
             </MainPanel>
           </div>
         </div>
