@@ -13,6 +13,11 @@ const DarkNav = glamorous.nav({
 });
 
 class NavBar extends React.Component {
+  static propTypes = {
+    router: shape({
+      pathname: string.isRequired
+    }).isRequired
+  };
   state = {
     isOpen: false
   };
@@ -92,12 +97,6 @@ class NavBar extends React.Component {
     );
   }
 }
-
-NavBar.propTypes = {
-  router: shape({
-    pathname: string.isRequired
-  }).isRequired
-};
 
 const MenuItem = props => (
   <Link href={props.link}>

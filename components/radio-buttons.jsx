@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { string, shape, arrayOf } from 'prop-types';
+import { string, shape, arrayOf, func } from 'prop-types';
 // import Link from 'next/link';
 import glamorous from 'glamorous';
 import { RadioGroup, Radio } from 'react-radio-group';
@@ -9,6 +9,22 @@ const RadioText = glamorous.span({
 });
 
 class RadioButtons extends Component {
+  static propTypes = {
+    groupName: string.isRequired,
+    initiallyChecked: string.isRequired,
+    options: arrayOf(
+      shape({
+        name: string.isRequired,
+        id: string.isRequired
+      })
+    ).isRequired,
+    onChange: func
+  };
+
+  static defaultProps = {
+    onChange: () => {}
+  };
+
   // For the default props, allow user to pass in default state
   state = {
     selectedValue: this.props.initiallyChecked
@@ -18,6 +34,8 @@ class RadioButtons extends Component {
   // browser play nice!
   handleChange = value => {
     this.setState({ selectedValue: value });
+    // Pass the state back up to 'Upload'
+    this.props.onChange(value);
   };
 
   // Need to migrate to react-radio-group!!
@@ -41,16 +59,5 @@ class RadioButtons extends Component {
     );
   }
 }
-
-RadioButtons.propTypes = {
-  groupName: string.isRequired,
-  initiallyChecked: string.isRequired,
-  options: arrayOf(
-    shape({
-      name: string.isRequired,
-      id: string.isRequired
-    })
-  ).isRequired
-};
 
 export default RadioButtons;

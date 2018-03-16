@@ -7,7 +7,8 @@ import axios from 'axios';
 import Layout from '../components/my-layout';
 import RadioButtons from '../components/radio-buttons';
 import fileSeparators from '../components/file-separators';
-import DataTableByCol from '../components/data-table';
+// import DataTableByCol from '../components/data-table-by-col';
+import DataTableByRow from '../components/data-table-by-row';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({
@@ -36,7 +37,11 @@ const axiosConfig = {
 class Upload extends Component {
   state = {
     fileName: null,
-    uploadedData: null
+    uploadedData: {
+      data: null,
+      headers: true
+    },
+    delimiter: 'commaSep'
     // file: null,
     // uploadStatus: ''
   };
@@ -57,6 +62,7 @@ class Upload extends Component {
   uploadFile = file => {
     // initialize FormData object
     const data = new FormData();
+    data.append('delimiter', this.state.delimiter);
     // Then append the file
     data.append('file', file);
     // And post the multipart/form-data object to the server
@@ -73,6 +79,25 @@ class Upload extends Component {
         Rollbar.error(err);
       });
   };
+  // This takes in separator from RadioButtons (which calls this.props.onChange())
+  handleSepChange = delim => {
+    this.setState({ delimiter: delim });
+    this.reprocessFile(delim);
+  };
+  reprocessFile(delim) {
+    axios
+      .put('/upload/reprocess', { delim }, axiosConfig)
+      .then(res => {
+        if (res.data.type === 'success') {
+          // Got a little side-tracked worrying about setting state here...
+          // but having state depend on state is where it gets dangerous!
+          this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
+        }
+      })
+      .catch(err => {
+        Rollbar.error(err);
+      });
+  }
   render() {
     return (
       <Layout>
@@ -114,7 +139,8 @@ class Upload extends Component {
                       <label htmlFor="separator">
                         <strong>Separator</strong>
                         <div className="control" id="separator">
-                          <RadioButtons {...fileSeparators} />
+                          {/* By specifying a function here, we can take in an argument pass UP from RadioButtons */}
+                          <RadioButtons {...fileSeparators} onChange={this.handleSepChange} />
                         </div>
                       </label>
                     </div>
@@ -124,7 +150,7 @@ class Upload extends Component {
             </UploadPanel>
             <MainPanel className="tile is-parent is-9">
               {/* <h2 className="title is-size-3">Main Panel</h2> */}
-              <DataTableByCol {...this.state.uploadedData} />
+              {<DataTableByRow data={this.state.uploadedData.data} />}
             </MainPanel>
           </div>
         </div>

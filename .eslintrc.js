@@ -25,7 +25,8 @@ module.exports = {
         specialLink: ['hrefLeft', 'hrefRight'],
         aspects: ['invalidHref', 'preferButton']
       }
-    ]
+    ],
+    'no-underscore-dangle': ['error', { allow: ['_react_id'] }]
   },
   globals: {
     Rollbar: true
