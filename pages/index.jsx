@@ -19,6 +19,10 @@ const HeroButtonContainer = glamorous.div({
   marginTop: '25px'
 });
 
+const FooterText = glamorous.div({
+  padding: '0.75rem'
+});
+
 const HomePage = () => (
   <Layout>
     <section className="hero is-light is-fullheight" id="welcomeHero">
@@ -61,6 +65,28 @@ const HomePage = () => (
             <Button className="button is-large is-link" title="Tutorial" link="/help/tutorial" />
           </HeroButtonContainer>
         </HeroContainer>
+      </div>
+      <div className="hero-foot">
+        <FooterText className="is-pulled-right field is-grouped">
+          {/* <div className="control">
+            <div className="tags has-addons">
+              <span className="tag is-dark">MetaBridge</span>
+              <span className="tag is-info">1.0</span>
+            </div>
+          </div> */}
+          <div className="control">
+            <div className="tags has-addons">
+              <span className="tag is-dark">Pathway Tools</span>
+              <span className="tag is-success">21.5</span>
+            </div>
+          </div>
+          <div className="control">
+            <div className="tags has-addons">
+              <span className="tag is-dark">KEGG</span>
+              <span className="tag is-link">2018-03-14</span>
+            </div>
+          </div>
+        </FooterText>
       </div>
     </section>
   </Layout>
