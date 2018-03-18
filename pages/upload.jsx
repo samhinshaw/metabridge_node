@@ -81,12 +81,12 @@ class Upload extends Component {
   //     });
   // }
   render() {
-    const { data } = this.state.uploadedData;
+    // const { data } = this.state.uploadedData;
     return (
       <Layout>
         <div className="section">
-          <div className="tile is-ancestor">
-            <UploadPanel className="tile is-parent is-vertical is-3">
+          <div className="columns">
+            <UploadPanel className="column is-3">
               <div className="card">
                 <div className="card-content">
                   <h2 className="title is-size-3">Upload</h2>
@@ -132,10 +132,17 @@ class Upload extends Component {
                 </div>
               </div>
             </UploadPanel>
-            <MainPanel className="tile is-parent is-9">
+            <MainPanel className="column is-9">
               {/* <h2 className="title is-size-3">Main Panel</h2> */}
               {/* {console.log("here's the current data: ", uploadedFile)} */}
-              {data ? <DataTableByRow data={data} /> : <h1>Hello from Upload</h1>}
+              {this.state.uploadedData.data ? (
+                <DataTableByRow data={this.state.uploadedData.data} />
+              ) : (
+                <div className="notification is-info">
+                  {/* <button className="delete" aria-label="delete" /> */}
+                  Upload a file to get started!
+                </div>
+              )}
               {/* {<DataTableByRow data={data} />} */}
             </MainPanel>
           </div>
