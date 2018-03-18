@@ -9,6 +9,7 @@ import RadioButtons from '../components/radio-buttons';
 import fileDelimiters from '../component-data/file-delimiters';
 // import DataTableByCol from '../components/data-table-by-col';
 import DataTableByRow from '../components/data-table-by-row';
+import FileUpload from '../components/file-upload';
 // import Button from '../components/button';
 
 const UploadPanel = glamorous.div({
@@ -24,10 +25,6 @@ const Instructions = glamorous.div({
   marginBottom: '24px'
 });
 
-const FileUpload = glamorous.div({
-  marginBottom: '24px'
-});
-
 const axiosConfig = {
   // onUploadProgress(progressEvent) {
   //   const percentCompleted = Math.round(progressEvent.loaded * 100 / progressEvent.total);
@@ -36,7 +33,6 @@ const axiosConfig = {
 
 class Upload extends Component {
   state = {
-    fileName: null,
     uploadedData: {
       data: null,
       headers: true
@@ -44,20 +40,6 @@ class Upload extends Component {
     delimiter: 'commaSep'
     // file: null,
     // uploadStatus: ''
-  };
-  handleUpload = event => {
-    // Is is necessary to check if file was input successfully?
-    // Going to check for now anyways
-    if (event.target.files[0]) {
-      this.setState({ fileName: event.target.files[0].name });
-      // this.setState({ uploadStatus: 'is-success' });
-      // If the user uploaded a TEXT file, use it!
-      if (event.target.files[0].type.startsWith('text/')) {
-        this.uploadFile(event.target.files[0]);
-      } else {
-        // Otherwise, do something to inform user their upload was invalid
-      }
-    }
   };
   uploadFile = file => {
     // initialize FormData object
@@ -82,24 +64,24 @@ class Upload extends Component {
   // This takes in separator from RadioButtons (which calls this.props.onChange())
   handleSepChange = delim => {
     this.setState({ delimiter: delim });
-    this.reprocessFile(delim);
+    // this.reprocessFile(delim);
   };
-  reprocessFile(delim) {
-    axios
-      .put('/upload/reprocess', { delim }, axiosConfig)
-      .then(res => {
-        if (res.data.type === 'success') {
-          // Got a little side-tracked worrying about setting state here...
-          // but having state depend on state is where it gets dangerous!
-          this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
-        }
-      })
-      .catch(err => {
-        Rollbar.error(err);
-      });
-  }
+  // reprocessFile(delim) {
+  //   axios
+  //     .put('/upload/reprocess', { delim }, axiosConfig)
+  //     .then(res => {
+  //       if (res.data.type === 'success') {
+  //         // Got a little side-tracked worrying about setting state here...
+  //         // but having state depend on state is where it gets dangerous!
+  //         this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
+  //       }
+  //     })
+  //     .catch(err => {
+  //       Rollbar.error(err);
+  //     });
+  // }
   render() {
-    const uploadedFile = this.state.uploadedData.data;
+    const { data } = this.state.uploadedData;
     return (
       <Layout>
         <div className="section">
@@ -113,7 +95,8 @@ class Upload extends Component {
                     interest in a single column, or try out our example dataset.
                   </Instructions>
                   <form>
-                    <FileUpload className="file has-name is-centered is-boxed" id="fileUpload">
+                    <FileUpload uploadFile={this.uploadFile} />
+                    {/* <FileUpload className="file has-name is-centered is-boxed" id="fileUpload">
                       <label className="file-label" htmlFor="metaboliteUpload">
                         <input
                           className="file-input"
@@ -133,9 +116,9 @@ class Upload extends Component {
                           </span>
                           <span className="file-label">Upload Metabolites</span>
                         </span>
-                        <span className="file-name">{this.state.fileName}</span>
+                        <span className="file-name">{this.state.filename}</span>
                       </label>
-                    </FileUpload>
+                    </FileUpload> */}
                     <div className="field">
                       <label htmlFor="separator">
                         <strong>Separator</strong>
@@ -152,8 +135,8 @@ class Upload extends Component {
             <MainPanel className="tile is-parent is-9">
               {/* <h2 className="title is-size-3">Main Panel</h2> */}
               {/* {console.log("here's the current data: ", uploadedFile)} */}
-              {/* {uploadedFile ? <DataTableByRow data={uploadedFile} /> : <h1>Hello from Upload</h1>} */}
-              {<DataTableByRow data={uploadedFile} />}
+              {data ? <DataTableByRow data={data} /> : <h1>Hello from Upload</h1>}
+              {/* {<DataTableByRow data={data} />} */}
             </MainPanel>
           </div>
         </div>

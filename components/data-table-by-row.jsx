@@ -46,16 +46,21 @@ class DataTableByRow extends Component {
     data: null,
     selectedColumn: null
   };
+  // I figured out the rendering problem!!! If we had conditional rendering of
+  // the component, then it wouldn't be rendered with null data initially.
+  // However, we were only checking for new data on
+  // `componentWillReceiveProps()`. However, this doesn't get called on first
+  // render, so we weren't actually calling it until it was rendered for a
+  // second time (when it got a SECOND csv?)! SO, instead we're calling
+  // `hashArray()` on `componentWillMount()` when it mounts the first time AND
+  // `componentWillReceiveProps()`, before it updates each subsequent time.
+  componentWillMount() {
+    this.hashArray(this.props.data);
+  }
   componentWillReceiveProps(nextProps) {
+    // If we actually have non-null data AND we're not getting the same props
     if (nextProps.data && this.props !== nextProps) {
-      // Here we want to hash our rows to allow for proper React keys!
-      // Using a simple hash will ensure that our
-      const hashedData = nextProps.data.map(row => {
-        // This is a column name, so has to be something our user wouldn't pick
-        row._react_id = hash(`${row}`); /* eslint-disable-line no-param-reassign */
-        return row;
-      });
-      this.setState({ data: hashedData });
+      this.hashArray(nextProps.data);
     }
   }
   shouldComponentUpdate(nextProps) {
@@ -66,31 +71,24 @@ class DataTableByRow extends Component {
     const { colname } = event.target.dataset;
     this.setState({ selectedColumn: colname });
   };
-  // componentDidUpdate() {
-  //   console.log('will update with data: ', this.props.uploadedData);
-  //   if (this.props.uploadedData.data) {
-  //     // add unique ID to each row
-  //     this.props.uploadedData.data.map(row => {
-  //       console.log('this row is: ', row);
-  //       const newRow = Object.assign({}, row, { key: uniqid() });
-  //       rows.push(newRow);
-  //       return 'assigned uniqid to rows';
-  //     });
-  //     this.setState({ data: rows });
-  //   }
-  // }
+  hashArray = arrayToHash => {
+    // Here we want to hash our rows to allow for proper React keys!
+    // Using a simple hash will ensure that our
+    const hashedData = arrayToHash.map(row => {
+      // This is a column name, so has to be something our user wouldn't pick
+      row._react_id = hash(`${row}`); /* eslint-disable-line no-param-reassign */
+      return row;
+    });
+    this.setState({ data: hashedData });
+  };
   render() {
+    // Only render if we actually have data!
     if (this.state.data) {
-      // const columns = Object.keys(this.state.data[0]).map(col => ({
-      //   Header: col,
-      //   accessor: col
-      // }));
-      // return <ReactTable data={this.state.data} columns={columns} className="table" />;
-      // console.log(this.props.uploadedData.data);
       return (
         <table className="table is-fullwidth is-bordered">
           <thead>
             <tr>
+              {/* Only map the first row to TableHead (data[0]) */}
               {this.state.data[0].map(colname => {
                 // Leave out the _react_id column
                 const lowerColname = colname.replace(/\s/g, '').toLowerCase();
@@ -139,13 +137,15 @@ class DataTableByRow extends Component {
                   </tr>
                 );
               }
+              // Return null for the first row
               return null;
             })}
           </tbody>
         </table>
       );
     }
-    return <h1>Hello from DataTable!</h1>;
+    // Otherwise, if no data, just return null
+    return null;
   }
 }
 
