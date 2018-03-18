@@ -9,7 +9,7 @@ const Tutorial = () => (
   <Layout>
     <section className="section">
       <div className="columns is-centered">
-        <div className="column is-8-desktop">
+        <div className="column is-8-desktop content">
           <h2 className="is-size-2" id="metabolite-preprocessing">
             I. Metabolite Preprocessing (Optional)
           </h2>
@@ -18,7 +18,7 @@ const Tutorial = () => (
             metabolite IDs. If you are starting with raw metabolomics data, you will need to
             preprocess your metabolites with your method of choice to obtain compounds of interest
             and their corresponding metabolite IDs. We recommend
-            <a href="http://www.metaboanalyst.ca">MetaboAnalyst</a> for metabolite preprocessing.
+            <a href="http://www.metaboanalyst.ca"> MetaboAnalyst </a>for metabolite preprocessing.
           </p>
           <p>
             <a href="http://www.metaboanalyst.ca">
@@ -54,7 +54,7 @@ const Tutorial = () => (
             3. Download Results
           </h3>
           <p>Download your full mapping results (example table below).</p>
-          <table className="table">
+          <table className="table is-fullwidth is-bordered">
             <thead className="thead">
               <tr>
                 <th>KEGG</th>
@@ -118,7 +118,7 @@ const Tutorial = () => (
           <p>
             Visit <a href="http://www.networkanalyst.ca">NetworkAnalyst</a> and start with
             <a href="http://www.networkanalyst.ca/faces/Secure/network/SignatureView.xhtml">
-              A list of genes or proteins
+              &nbsp;A list of genes or proteins&nbsp;
             </a>
             input.
           </p>
