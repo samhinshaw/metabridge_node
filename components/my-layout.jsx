@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { shape } from 'prop-types';
 import 'bulma/css/bulma.css';
 import NavBar from './navbar';
@@ -6,24 +6,77 @@ import NavBar from './navbar';
 // only need to do this at document root! :)
 import '../components/style-importance';
 
-const Layout = props => {
-  if (props.children.props.id === 'welcomeHero') {
-    return <div>{props.children}</div>;
+class Layout extends Component {
+  static propTypes = {
+    children: shape({})
+  };
+
+  static defaultProps = {
+    children: {}
+  };
+
+  state = {
+    classToOpenModal: 'modal'
+  };
+
+  openModal = () => {
+    this.setState({ classToOpenModal: 'modal is-active' });
+  };
+
+  // afterOpenModal = () => {
+  //   // references are now sync'd and can be accessed.
+  // };
+
+  closeModal = () => {
+    this.setState({ classToOpenModal: 'modal' });
+  };
+
+  // Could work with booleans, but this is much more straightforward!
+  // isModalOpen = () => (this.state.modalIsOpen ? 'modal is-active' : 'modal');
+
+  render() {
+    if (this.props.children.props.id === 'welcomeHero') {
+      return <div>{this.props.children}</div>;
+    }
+    return (
+      <div>
+        <NavBar onClick={this.openModal} />
+        <div className={this.state.classToOpenModal}>
+          <div
+            onClick={this.closeModal}
+            onKeyPress={this.closeModal}
+            className="modal-background"
+            aria-label="close"
+            role="button"
+            tabIndex="0"
+          />
+          <div className="modal-card">
+            <header className="modal-card-head is-warning">
+              <p className="modal-card-title">Clear Session?</p>
+              <button onClick={this.closeModal} className="delete" aria-label="close" />
+            </header>
+            <section className="modal-card-body">
+              <article className="message is-warning">
+                <div className="message-body">
+                  Are you sure you wish to clear your current session? Your data will not be
+                  recoverable!
+                </div>
+              </article>
+            </section>
+            <footer className="modal-card-foot">
+              <button onClick={this.closeModal} className="button is-warning">
+                Clear Session
+              </button>
+              <button onClick={this.closeModal} className="button">
+                Cancel
+              </button>
+            </footer>
+          </div>
+        </div>
+        {this.props.children}
+      </div>
+    );
   }
-  return (
-    <div>
-      <NavBar />
-      {props.children}
-    </div>
-  );
-};
-
-Layout.propTypes = {
-  children: shape({})
-};
-
-Layout.defaultProps = {
-  children: {}
-};
+}
 
 export default Layout;

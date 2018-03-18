@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, shape, func } from 'prop-types';
 import glamorous from 'glamorous';
 import { mainMenuItems /* endMenuButtons */ } from '../component-data/navbar-items';
 // import Button from './button';
@@ -16,28 +16,34 @@ class NavBar extends React.Component {
   static propTypes = {
     router: shape({
       pathname: string.isRequired
-    }).isRequired
+    }).isRequired,
+    onClick: func.isRequired
   };
+
   state = {
     isOpen: false
   };
+
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
   };
+
   toggleKeypress = event => {
     if (event.key === ' ' || event.key === 'Enter') {
       this.toggle();
     }
   };
+
   // Fix this to handle the /help dropdown nav menu
   tabIsActive = href => {
     if (href === this.props.router.pathname) return 'is-active';
     return '';
   };
   clearCurrentSession = () => {
-    alert('Analysis Cleared!');
+    this.props.onClick();
+    // alert('Analysis Cleared!');
   };
   render() {
     return (
