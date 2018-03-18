@@ -99,6 +99,7 @@ class Upload extends Component {
       });
   }
   render() {
+    const uploadedFile = this.state.uploadedData.data;
     return (
       <Layout>
         <div className="section">
@@ -150,7 +151,9 @@ class Upload extends Component {
             </UploadPanel>
             <MainPanel className="tile is-parent is-9">
               {/* <h2 className="title is-size-3">Main Panel</h2> */}
-              {<DataTableByRow data={this.state.uploadedData.data} />}
+              {/* {console.log("here's the current data: ", uploadedFile)} */}
+              {/* {uploadedFile ? <DataTableByRow data={uploadedFile} /> : <h1>Hello from Upload</h1>} */}
+              {<DataTableByRow data={uploadedFile} />}
             </MainPanel>
           </div>
         </div>

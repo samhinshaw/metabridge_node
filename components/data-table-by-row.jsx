@@ -145,7 +145,7 @@ class DataTableByRow extends Component {
         </table>
       );
     }
-    return <h1>No Data!</h1>;
+    return <h1>Hello from DataTable!</h1>;
   }
 }
 
