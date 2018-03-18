@@ -26,6 +26,8 @@ const fileDelimiters = {
 app
   .prepare()
   .then(() => {
+    // It may be better to have this server running separately
+    // I don't want to have expensive data handling operations crash my view handling
     const server = express();
 
     // bodyParser middleware
