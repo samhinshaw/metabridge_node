@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { shape } from 'prop-types';
-import 'bulma/css/bulma.css';
+import glamorous from 'glamorous';
+import '../styles/mystyles.scss';
 import NavBar from './navbar';
+
 // make glamorous styling most important
 // only need to do this at document root! :)
 import '../components/style-importance';
+
+const ThinNav = glamorous.nav({
+  // padding: '1.5rem'
+});
 
 class Layout extends Component {
   static propTypes = {
@@ -74,6 +80,7 @@ class Layout extends Component {
           </div>
         </div>
         {this.props.children}
+        <ThinNav className="navbar is-fixed-bottom is-dark" />
       </div>
     );
   }
