@@ -62,7 +62,7 @@ class MyDocument extends Document {
 
           <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" />
         </Head>
-        <body id="root">
+        <body id="root" className="has-navbar-fixed-bottom">
           <Main />
           <NextScript />
         </body>

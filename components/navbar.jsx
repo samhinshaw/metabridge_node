@@ -41,10 +41,15 @@ class NavBar extends React.Component {
     if (href === this.props.router.pathname) return 'is-active';
     return '';
   };
+
   clearCurrentSession = () => {
     this.props.onClick();
     // alert('Analysis Cleared!');
   };
+  // saveCurrentSession = () => {
+  //   // this.props.onClick();
+  //   alert('Sorry, this function has not yet been implemented!');
+  // };
   render() {
     return (
       <DarkNav className="navbar is-dark">
@@ -97,12 +102,20 @@ class NavBar extends React.Component {
             {/* {endMenuButtons.map(item => <MenuItem {...item} key={item.link} />)} */}
             <div className="navbar-item">
               <div className="field is-grouped">
+                {/* <p className="control">
+                  <button className="button is-light" onClick={this.saveCurrentSession}>
+                    <span className="icon">
+                      <i className="fas fa-save" />
+                    </span>
+                    <span>Save</span>
+                  </button>
+                </p> */}
                 <p className="control">
                   <button className="button is-light" onClick={this.clearCurrentSession}>
                     <span className="icon">
                       <i className="fas fa-trash" />
                     </span>
-                    <span>Clear Current Analysis</span>
+                    <span>Clear Session</span>
                   </button>
                 </p>
                 {/* {endMenuButtons.map(button => <Button {...button} key={button.link} />)} */}
