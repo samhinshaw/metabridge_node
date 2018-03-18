@@ -7,7 +7,11 @@ import Layout from '../components/my-layout';
 
 const Help = () => (
   <Layout>
-    <h1 className="title">Help Page</h1>
+    <section className="section">
+      <div className="container">
+        <h1 className="title">Help Page</h1>
+      </div>
+    </section>
   </Layout>
 );
 

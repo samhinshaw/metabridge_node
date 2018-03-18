@@ -7,7 +7,11 @@ import Layout from '../components/my-layout';
 
 const MapMetabolites = () => (
   <Layout>
-    <h1 className="title">Map Metabolites</h1>
+    <section className="section">
+      <div className="container">
+        <h1 className="title">Map Metabolites</h1>
+      </div>
+    </section>
   </Layout>
 );
 
