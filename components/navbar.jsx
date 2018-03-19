@@ -54,14 +54,16 @@ class NavBar extends React.Component {
     return (
       <DarkNav className="navbar is-dark">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/">
-            <img
-              src="/static/logo_white.svg"
-              alt="MetaBridge: a modern CSS framework based on Flexbox"
-              width="56"
-              height="28"
-            />
-          </a>
+          <Link href="/">
+            <a className="navbar-item">
+              <img
+                src="/static/logo_white.svg"
+                alt="MetaBridge: a modern CSS framework based on Flexbox"
+                width="56"
+                height="28"
+              />
+            </a>
+          </Link>
           <div
             role="menubar"
             tabIndex="0"
