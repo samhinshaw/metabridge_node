@@ -13,12 +13,16 @@
     "graphql": "NODE_ENV=graphql node graphql.js",
     "build": "NODE_ENV=production next build",
     "build:babel": "NODE_ENV=production babel src --out-dir lib",
+    "deploy": "pm2 deploy deploy.config.js production",
     "start": "NODE_ENV=production node server.js",
     "test": "NODE_ENV=test jest",
     "test:coverage": "NODE_ENV=test jest --coverage",
     "test:update": "NODE_ENV=test jest -u",
-    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "format":
+      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "rollbar":
+      "curl https://api.rollbar.com/api/1/deploy/ -F access_token=ceb9067b85ae4c5a91c08b617d9f94c3 -F environment=production -F revision=`git log -n 1 --pretty=format:'%H'` -F local_username=`whoami`"
   },
   "dependencies": {
     "@zeit/next-css": "^0.1.4",
@@ -80,7 +84,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.0.0-alpha.0",
+    "jest": "^22.4.2",
     "next-react": "git+https://github.com/stevangoode/NextReact.git",
     "prettier": "^1.11.1"
   }
