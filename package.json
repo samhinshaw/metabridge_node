@@ -18,11 +18,9 @@
     "test": "NODE_ENV=test jest",
     "test:coverage": "NODE_ENV=test jest --coverage",
     "test:update": "NODE_ENV=test jest -u",
-    "format":
-      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "rollbar":
-      "curl https://api.rollbar.com/api/1/deploy/ -F access_token=ceb9067b85ae4c5a91c08b617d9f94c3 -F environment=production -F revision=`git log -n 1 --pretty=format:'%H'` -F local_username=`whoami`"
+    "rollbar": "curl https://api.rollbar.com/api/1/deploy/ -F access_token=ceb9067b85ae4c5a91c08b617d9f94c3 -F environment=production -F revision=`git log -n 1 --pretty=format:'%H'` -F local_username=`whoami`"
   },
   "dependencies": {
     "@zeit/next-css": "^0.1.4",

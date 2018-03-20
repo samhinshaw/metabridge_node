@@ -6,7 +6,7 @@ import NavBar from './navbar';
 
 // make glamorous styling most important
 // only need to do this at document root! :)
-import '../components/style-importance';
+import './style-importance';
 
 const ThinNav = glamorous.nav({
   // padding: '1.5rem'

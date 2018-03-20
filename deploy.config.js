@@ -6,8 +6,8 @@ module.exports = {
     // First application
     {
       name: 'metabridge',
-      script: 'npm',
-      args: 'run start',
+      script: 'yarn',
+      args: 'start',
       env: {
         NODE_ENV: 'development'
       },
@@ -32,7 +32,7 @@ module.exports = {
         'yarn install && yarn build && pm2 startOrRestart deploy.config.js --env production && yarn rollbar',
       env: {
         PATH:
-          '/home/sam/.nvm/versions/node/v8.10.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+          '/home/sam/.yarn/bin:/home/sam/.npm-global/bin:/home/sam/.nvm/versions/node/v8.10.0/bin:/home/sam/.npm-global/bin:/home/sam/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
       }
     }
     // dev: {

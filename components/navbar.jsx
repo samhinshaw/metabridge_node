@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-import { string, arrayOf, shape, func } from 'prop-types';
+import { string, arrayOf, shape, func, bool } from 'prop-types';
 import glamorous from 'glamorous';
 import { mainMenuItems /* endMenuButtons */ } from '../component-data/navbar-items';
 // import Button from './button';
@@ -17,7 +17,13 @@ class NavBar extends React.Component {
     router: shape({
       pathname: string.isRequired
     }).isRequired,
-    onClick: func.isRequired
+    onClick: func,
+    homePage: bool
+  };
+
+  static defaultProps = {
+    onClick: () => {},
+    homePage: false
   };
 
   state = {
@@ -100,11 +106,12 @@ class NavBar extends React.Component {
             })}
           </div>
 
-          <div className="navbar-end">
-            {/* {endMenuButtons.map(item => <MenuItem {...item} key={item.link} />)} */}
-            <div className="navbar-item">
-              <div className="field is-grouped">
-                {/* <p className="control">
+          {this.props.homePage ? null : (
+            <div className="navbar-end">
+              {/* {endMenuButtons.map(item => <MenuItem {...item} key={item.link} />)} */}
+              <div className="navbar-item">
+                <div className="field is-grouped">
+                  {/* <p className="control">
                   <button className="button is-light" onClick={this.saveCurrentSession}>
                     <span className="icon">
                       <i className="fas fa-save" />
@@ -112,18 +119,19 @@ class NavBar extends React.Component {
                     <span>Save</span>
                   </button>
                 </p> */}
-                <p className="control">
-                  <button className="button is-light" onClick={this.clearCurrentSession}>
-                    <span className="icon">
-                      <i className="fas fa-trash" />
-                    </span>
-                    <span>Clear Session</span>
-                  </button>
-                </p>
-                {/* {endMenuButtons.map(button => <Button {...button} key={button.link} />)} */}
+                  <p className="control">
+                    <button className="button is-light" onClick={this.clearCurrentSession}>
+                      <span className="icon">
+                        <i className="fas fa-trash" />
+                      </span>
+                      <span>Clear Session</span>
+                    </button>
+                  </p>
+                  {/* {endMenuButtons.map(button => <Button {...button} key={button.link} />)} */}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </DarkNav>
     );
