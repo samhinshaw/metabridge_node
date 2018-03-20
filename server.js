@@ -14,7 +14,6 @@ const purify = createDOMPurify(window);
 
 const rollbar = new UninitiatedRollbar('ceb9067b85ae4c5a91c08b617d9f94c3');
 const dev = process.env.NODE_ENV !== 'production';
-const prefix = '/dev';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -31,9 +30,6 @@ app
     // I don't want to have expensive data handling operations crash my view handling
     const server = express();
     const router = express.Router();
-    server.use(`${prefix}`, router);
-    server.use(`${prefix}/static`, express.static('static'));
-    server.use(handle);
 
     // bodyParser middleware
     // server.use(bodyParser.json());
@@ -41,7 +37,7 @@ app
     // server.use(expressSanitizer()); // this line follows bodyParser() instantiations
 
     // Think about bruteforce prevention here (to stop our server from getting hammered)
-    server.put(`${prefix}/upload`, (req, res) => {
+    server.put(`upload`, (req, res) => {
       // Will have to bring this in from the form separately
       const containsHeaders = false;
       // initialize empty data array
@@ -102,7 +98,7 @@ app
 
     server.listen(3000, err => {
       if (err) throw err;
-      console.log(`> Ready on http://localhost:3000${prefix}`); /* eslint-disable-line no-console */
+      console.log(`> Ready on http://localhost:3000`); /* eslint-disable-line no-console */
     });
   })
   .catch(ex => {
