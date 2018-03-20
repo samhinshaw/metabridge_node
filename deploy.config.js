@@ -6,8 +6,8 @@ module.exports = {
     // First application
     {
       name: 'metabridge',
-      script: 'yarn',
-      args: 'start',
+      script: 'npm',
+      args: 'run start',
       env: {
         NODE_ENV: 'development'
       },
