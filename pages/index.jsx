@@ -27,7 +27,7 @@ const HomePage = () => (
   <Layout>
     <section className="hero is-light is-fullheight" id="welcomeHero">
       <div className="hero-head">
-        <NavBar />
+        <NavBar homePage />
       </div>
       <div className="hero-body">
         <HeroContainer className="container">
