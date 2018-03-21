@@ -23,9 +23,9 @@ module.exports = {
   deploy: {
     production: {
       user: 'sam',
-      host: 'samhinshaw.com',
+      host: 'metabridge.org',
       ref: 'origin/master',
-      repo: 'git@github.com:samhinshaw/metabridge_node.git',
+      repo: 'https://github.com/samhinshaw/metabridge_node.git',
       path: '/home/sam/node_apps/metabridge',
       ssh_options: 'ForwardAgent=yes',
       'post-deploy':
