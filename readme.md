@@ -1,14 +1,14 @@
 # MetaBridge 2.0
 
-Hosted at [metabridge.samhinshaw.com](https://metabridge.samhinshaw.com/)
+Hosted at [dev.metabridge.org](https://dev.metabridge.org/)
 
 > ([metabridge.org/dev](https://metabridge.org/dev) will redirect you)
+
+MetaBridge 2.0 is a ground-up rewrite of MetaBridge! Written in React, with Node.js and Next.js, MetaBridge 2.0 will be faster, more stable, and have more features than the original MetaBridge!
 
 ## Description
 
 MetaBridge is a data integration system for integration of metabolomics data with other omics types, chiefly transcriptomics and proteomics.
-
-MetaBridge 2.0 is a ground-up rewrite of MetaBridge! Written in React, with Node.js and Next.js, MetaBridge 2.0 will be faster, more stable, and have more features than the original MetaBridge!
 
 ## Contents
 
