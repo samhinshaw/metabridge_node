@@ -37,7 +37,7 @@ app
     // server.use(expressSanitizer()); // this line follows bodyParser() instantiations
 
     // Think about bruteforce prevention here (to stop our server from getting hammered)
-    server.put(`upload`, (req, res) => {
+    server.put('/upload', (req, res) => {
       // Will have to bring this in from the form separately
       const containsHeaders = false;
       // initialize empty data array
