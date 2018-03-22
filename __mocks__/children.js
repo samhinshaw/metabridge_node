@@ -1,6 +1,6 @@
 const mockChildren = {
   props: {
-    id: 'welcomeHero'
+    id: 'welcome-hero'
   }
 };
 

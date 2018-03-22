@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import { shape } from 'prop-types';
-import glamorous from 'glamorous';
 import '../styles/mystyles.scss';
 import NavBar from './navbar';
 
 // make glamorous styling most important
 // only need to do this at document root! :)
 import './style-importance';
-
-const ThinNav = glamorous.nav({
-  // padding: '1.5rem'
-});
 
 class Layout extends Component {
   static propTypes = {
@@ -41,13 +36,10 @@ class Layout extends Component {
   // isModalOpen = () => (this.state.modalIsOpen ? 'modal is-active' : 'modal');
 
   render() {
-    if (this.props.children.props.id === 'welcomeHero') {
-      return <div>{this.props.children}</div>;
-    }
     return (
       <div>
         <NavBar onClick={this.openModal} />
-        <div className={this.state.classToOpenModal}>
+        <div className={this.state.classToOpenModal} id="clear-session-modal">
           <div
             onClick={this.closeModal}
             onKeyPress={this.closeModal}
@@ -80,7 +72,6 @@ class Layout extends Component {
           </div>
         </div>
         {this.props.children}
-        <ThinNav className="navbar is-fixed-bottom is-dark" />
       </div>
     );
   }

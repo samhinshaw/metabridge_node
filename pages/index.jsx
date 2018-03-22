@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import glamorous from 'glamorous';
+// import { css } from 'glamor';
 // import { shape, string } from 'prop-types';
-import NavBar from '../components/navbar';
 import Layout from '../components/my-layout';
 import Button from '../components/button';
 
@@ -23,13 +23,23 @@ const FooterText = glamorous.div({
   padding: '0.75rem'
 });
 
+const FullHeightHero = glamorous.section({
+  // We can calculate how tall this hero should be! We'll use 100vh (fullheight)
+  // and subtract the default height of the bulma navbar, 3.25rem
+  // https://bulma.io/documentation/components/navbar/#variables
+  // All thanks to CSS3's `calc()`!
+  minHeight: 'calc(100vh - 3.25rem)'
+});
+
+const VertCenteredContainer = glamorous.div({
+  display: 'flex',
+  alignItems: 'center'
+});
+
 const HomePage = () => (
   <Layout>
-    <section className="hero is-light is-fullheight" id="welcomeHero">
-      <div className="hero-head">
-        <NavBar homePage />
-      </div>
-      <div className="hero-body">
+    <FullHeightHero className="hero is-light" id="welcome-hero">
+      <VertCenteredContainer className="hero-body">
         <HeroContainer className="container">
           <h1 className="title is-size-1">MetaBridge</h1>
           <div className="hero-text is-size-4">
@@ -65,7 +75,7 @@ const HomePage = () => (
             <Button className="button is-large is-link" title="Tutorial" link="/help/tutorial" />
           </HeroButtonContainer>
         </HeroContainer>
-      </div>
+      </VertCenteredContainer>
       <div className="hero-foot">
         <FooterText className="is-pulled-right field is-grouped">
           {/* <div className="control">
@@ -92,7 +102,7 @@ const HomePage = () => (
           </div>
         </FooterText>
       </div>
-    </section>
+    </FullHeightHero>
   </Layout>
 );
 
