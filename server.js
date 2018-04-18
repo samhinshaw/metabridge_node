@@ -29,7 +29,9 @@ app
     // It may be better to have this server running separately
     // I don't want to have expensive data handling operations crash my view handling
     const server = express();
-    const router = express.Router();
+    server.use(`/static`, express.static('static'));
+    server.use(handle);
+    // const router = express.Router();
 
     // bodyParser middleware
     // server.use(bodyParser.json());
