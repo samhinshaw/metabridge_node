@@ -68,8 +68,9 @@ class DataTableByRow extends Component {
     return !!nextProps.data;
   }
   selectTable = event => {
-    const { colName } = event.target.dataset;
-    this.setState({ selectedColumn: colName });
+    const { colname } = event.target.dataset;
+    console.log(`setting selectedColumn to ${colname}`);
+    this.setState({ selectedColumn: colname });
   };
   hashArray = arrayToHash => {
     // Here we want to hash our rows to allow for proper React keys!
@@ -89,18 +90,18 @@ class DataTableByRow extends Component {
           <thead>
             <tr>
               {/* Only map the first row to TableHead (data[0]) */}
-              {this.state.data[0].map(colName => {
+              {this.state.data[0].map(colname => {
                 // Leave out the _react_id column
-                const lowerColName = colName.replace(/\s/g, '').toLowerCase();
+                const lowerColname = colname.replace(/\s/g, '').toLowerCase();
                 return (
                   <HoverableTH
-                    key={colName}
+                    key={colname}
                     onClick={this.selectTable}
-                    data-colname={lowerColName}
-                    className={this.state.selectedColumn === lowerColName ? 'is-selected' : ''}
+                    data-colname={lowerColname}
+                    className={this.state.selectedColumn === lowerColname ? 'is-selected' : ''}
                     tabIndex="0"
                   >
-                    {colName}
+                    {colname}
                   </HoverableTH>
                 );
               })}
@@ -116,17 +117,17 @@ class DataTableByRow extends Component {
                   // Consider the uniqid package: https://www.npmjs.com/package/uniqid
                   <tr key={row._react_id}>
                     {row.map((cell, colIndex) => {
-                      const colName = this.state.data[0][colIndex];
-                      const lowerColName = colName.replace(/\s/g, '').toLowerCase();
+                      const colname = this.state.data[0][colIndex];
+                      const lowerColname = colname.replace(/\s/g, '').toLowerCase();
                       // Here we're making a td key from:
                       // column name + row hash + cell contents
-                      const key = `${lowerColName}-${row._react_id}-${cell}`;
+                      const key = `${lowerColname}-${row._react_id}-${cell}`;
                       return (
                         <HoverableTD
                           key={key}
-                          data-colname={lowerColName}
+                          data-colname={lowerColname}
                           className={
-                            this.state.selectedColumn === lowerColName ? 'is-selected' : ''
+                            this.state.selectedColumn === lowerColname ? 'is-selected' : ''
                           }
                           onClick={this.selectTable}
                         >
