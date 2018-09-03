@@ -95,30 +95,11 @@ class Upload extends Component {
                     interest in a single column, or try out our example dataset.
                   </Instructions>
                   <form>
+                    {/* Separate this out into its own component, but pass in the uploadFile function!
+                    The function must be passed in, because uploadFile sets state on THIS page!
+                    If we were using Redux (or maybe the new context API? I haven't looked into that ) 
+                    yet, we could probably implement this better. */}
                     <FileUpload uploadFile={this.uploadFile} />
-                    {/* <FileUpload className="file has-name is-centered is-boxed" id="fileUpload">
-                      <label className="file-label" htmlFor="metaboliteUpload">
-                        <input
-                          className="file-input"
-                          type="file"
-                          name="metaboliteUpload"
-                          id="metaboliteUpload"
-                          onChange={this.handleUpload}
-                          // See 'uncontrolled components' to understand why ref is necessary
-                          // https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag
-                          ref={input => {
-                            this.fileInput = input;
-                          }}
-                        />
-                        <span className="file-cta">
-                          <span className="file-icon">
-                            <i className="fas fa-upload" />
-                          </span>
-                          <span className="file-label">Upload Metabolites</span>
-                        </span>
-                        <span className="file-name">{this.state.filename}</span>
-                      </label>
-                    </FileUpload> */}
                     <div className="field">
                       <label htmlFor="separator">
                         <strong>Separator</strong>

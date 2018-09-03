@@ -64,7 +64,7 @@ class NavBar extends React.Component {
             <a className="navbar-item">
               <img
                 src="/static/logo_white.svg"
-                alt="MetaBridge: a modern CSS framework based on Flexbox"
+                alt="MetaBridge: Network-based integrative analysis of metabolomics data"
                 width="56"
                 height="28"
               />

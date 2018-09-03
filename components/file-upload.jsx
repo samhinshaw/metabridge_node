@@ -7,6 +7,7 @@ const UploadBox = glamorous.div({
 });
 
 class FileUpload extends Component {
+  // uploadFile function MUST BE PASSED IN
   static propTypes = {
     uploadFile: func.isRequired
   };
@@ -23,6 +24,7 @@ class FileUpload extends Component {
       // this.setState({ uploadStatus: 'is-success' });
       // If the user uploaded a TEXT file, use it!
       if (event.target.files[0].type.startsWith('text/')) {
+        // Note that our uploadFile function MUST BE PASSED IN
         this.props.uploadFile(event.target.files[0]);
       } else {
         // Otherwise, do something to inform user their upload was invalid

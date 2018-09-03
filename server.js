@@ -71,14 +71,16 @@ app
           // Save the most recently read file path
           // Might have to set this by session/cookie?
           res.locals.mostRecentFile = filePath;
+          // read the CSV in
           csv
+            // from the file path
             .fromPath(filePath, { headers: containsHeaders, delimiter })
             .on('data', data => {
+              // and sanitize the inputs
               const row = [];
-              data.map(cell => {
+              data.forEach(cell => {
                 // row.push(xssFilters.inHTMLData(cell));
                 row.push(purify.sanitize(cell));
-                return 'all cells in row pushed';
               });
               uploadedData.push(row);
             })
