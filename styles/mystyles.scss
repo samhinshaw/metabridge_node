@@ -11,18 +11,17 @@
 // Add a serif family
 // $family-serif: 'Merriweather', 'Georgia', serif;
 
-// Make a dark blue
-$dark-blue: #2c3e50;
-$dark-blue-invert: findColorInvert($dark-blue);
-
 // 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $dark-blue;
-$primary-invert: $dark-blue-invert;
-// Use the existing orange as the danger color
-// $danger: $orange;
-// Use the new serif family
-// $family-primary: $family-serif;
+
+// I'm enjoying the link blue, but I want these classes to be semantic,
+// so I'll map the 'link blue' to 'info' for now (it's normally cyan)
+// and I can come back to this later--ostensibly to remap link blue.
+$info: $blue;
+$info-invert: findColorInvert($blue);
+
+// Also make this blue the primary color for now:
+$primary: $info;
+$primary-invert: $info-invert;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
@@ -32,12 +31,25 @@ $twitter-invert: findColorInvert($twitter);
 $github: #333;
 $github-invert: findColorInvert($github);
 
+// Make a dark blue
+$dark-blue: #2c3e50;
+$dark-blue-invert: findColorInvert($dark-blue);
+
 // 5. Add new color variables to the color map.
 @import 'bulma/sass/utilities/derived-variables';
 $addColors: (
-  'twitter': ($twitter, $twitter-invert),
-  'linkedin': ($linkedin, $linkedin-invert),
-  'github': ($github, $github-invert)
+  'twitter': (
+    $twitter,
+    $twitter-invert
+  ),
+  'linkedin': (
+    $linkedin,
+    $linkedin-invert
+  ),
+  'github': (
+    $github,
+    $github-invert
+  )
 );
 $colors: map-merge($colors, $addColors);
 

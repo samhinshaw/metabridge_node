@@ -96,7 +96,7 @@ const HomePage = () => (
             <div className="tags has-addons">
               <a href="http://www.genome.jp/kegg/">
                 <span className="tag is-dark">KEGG</span>
-                <span className="tag is-link">2018-03-14</span>
+                <span className="tag is-info">2018-03-14</span>
               </a>
             </div>
           </div>
