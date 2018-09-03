@@ -30,7 +30,6 @@ app
     // I don't want to have expensive data handling operations crash my view handling
     const server = express();
     server.use(`/static`, express.static('static'));
-    server.use(handle);
     // const router = express.Router();
 
     // bodyParser middleware
