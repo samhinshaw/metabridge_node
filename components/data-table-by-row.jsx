@@ -96,7 +96,7 @@ class DataTableByRow extends Component {
                   <HoverableTH
                     key={colName}
                     onClick={this.selectTable}
-                    data-colName={lowerColName}
+                    data-colname={lowerColName}
                     className={this.state.selectedColumn === lowerColName ? 'is-selected' : ''}
                     tabIndex="0"
                   >
@@ -124,7 +124,7 @@ class DataTableByRow extends Component {
                       return (
                         <HoverableTD
                           key={key}
-                          data-colName={lowerColName}
+                          data-colname={lowerColName}
                           className={
                             this.state.selectedColumn === lowerColName ? 'is-selected' : ''
                           }
