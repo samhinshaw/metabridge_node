@@ -41,6 +41,12 @@ class Upload extends Component {
     // file: null,
     // uploadStatus: ''
   };
+
+  setExamples = event => {
+    console.log(event.target.dataset.example);
+    // this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
+  };
+
   uploadFile = file => {
     // initialize FormData object
     const data = new FormData();
@@ -112,15 +118,44 @@ class Upload extends Component {
                   </form>
                 </div>
               </div>
+              <div className="card">
+                <div className="card-content">
+                  <h3 className="title is-size-4">Examples</h3>
+                  <small>(To be implemented...)</small>
+                  <br />
+                  <br />
+                  <div className="examples field">
+                    <div className="buttons">
+                      {/* I would make this into a component, but for now I only want ~2, 
+                      and in the future I will likely redesign the example interface. */}
+                      <button
+                        disabled
+                        className="button is-light"
+                        onClick={this.setExamples}
+                        data-example="glucose"
+                      >
+                        Glucose
+                      </button>
+                      <button
+                        disabled
+                        className="button is-light"
+                        onClick={this.setExamples}
+                        data-example="glucose"
+                      >
+                        Pyruvate
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </UploadPanel>
             <MainPanel className="column is-9">
-              {/* <h2 className="title is-size-3">Main Panel</h2> */}
-              {/* {console.log("here's the current data: ", uploadedFile)} */}
+              {/* If we've got data, render our table! */}
               {this.state.uploadedData.data ? (
                 <DataTableByRow data={this.state.uploadedData.data} />
               ) : (
                 <div className="notification is-info">
-                  {/* <button className="delete" aria-label="delete" /> */}
+                  {/* Otherwise, show our notification */}
                   Upload a file to get started!
                 </div>
               )}
