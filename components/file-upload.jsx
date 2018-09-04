@@ -16,6 +16,8 @@ class FileUpload extends Component {
     filename: ''
   };
 
+  //! REFACTOR ME!
+  // See comment on Upload.uploadFile() for more information
   handleUpload = event => {
     // This is what the event looks like!
     // Is is necessary to check if file was input successfully?

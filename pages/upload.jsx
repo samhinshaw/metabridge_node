@@ -43,10 +43,12 @@ class Upload extends Component {
   };
 
   setExamples = event => {
-    console.log(event.target.dataset.example);
+    // console.log(event.target.dataset.example);
     // this.setState({ uploadedData: { headers: res.data.headers, data: res.data.data } });
   };
 
+  //! REFACTOR ME! Parse the data here, don't PUT.
+  // Later, we'll write a REST or GraphQL API to give the metabolite mappings.
   uploadFile = file => {
     // initialize FormData object
     const data = new FormData();
