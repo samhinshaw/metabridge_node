@@ -2,15 +2,8 @@
 
 exports[`Search renders correctly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Layout>
-    Object {
-      "props": Object {
-        "id": "welcomeHero",
-      },
-    }
-  </Layout>,
+  Symbol(enzyme.__unrendered__): <TestLayout />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,49 +14,93 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Object {
-        "props": Object {
-          "id": "welcomeHero",
-        },
-      },
+      "children": <Layout>
+        Object {
+          "props": Object {
+            "id": "welcome-hero",
+          },
+        }
+      </Layout>,
     },
     "ref": null,
     "rendered": Object {
-      "props": Object {
-        "id": "welcomeHero",
-      },
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Object {
           "props": Object {
-            "id": "welcomeHero",
+            "id": "welcome-hero",
           },
         },
       },
       "ref": null,
       "rendered": Object {
         "props": Object {
-          "id": "welcomeHero",
+          "id": "welcome-hero",
         },
       },
-      "type": "div",
+      "type": [Function],
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Layout>
+          Object {
+            "props": Object {
+              "id": "welcome-hero",
+            },
+          }
+        </Layout>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Object {
+            "props": Object {
+              "id": "welcome-hero",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "props": Object {
+            "id": "welcome-hero",
+          },
+        },
+        "type": [Function],
+      },
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;

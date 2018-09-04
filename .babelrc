@@ -18,7 +18,7 @@
       "plugins": ["transform-es2015-modules-commonjs"]
     },
     "test": {
-      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+      "presets": [["@babel/preset-env", { "modules": "commonjs" }], "next/babel"]
     }
   }
 }
