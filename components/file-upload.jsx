@@ -17,6 +17,7 @@ class FileUpload extends Component {
   };
 
   handleUpload = event => {
+    // This is what the event looks like!
     // Is is necessary to check if file was input successfully?
     // Going to check for now anyways
     if (event.target.files[0]) {
@@ -26,10 +27,13 @@ class FileUpload extends Component {
       if (event.target.files[0].type.startsWith('text/')) {
         // Note that our uploadFile function MUST BE PASSED IN
         this.props.uploadFile(event.target.files[0]);
-      } else {
-        // Otherwise, do something to inform user their upload was invalid
+        return event.target.files[0].name;
       }
+      // Otherwise, we should do something to inform user their upload was
+      // invalid
+      return null;
     }
+    return null;
   };
   render() {
     return (

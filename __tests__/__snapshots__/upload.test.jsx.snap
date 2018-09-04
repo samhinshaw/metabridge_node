@@ -1,0 +1,1484 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blank upload page renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Upload />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="section"
+      >
+        <div
+          className="columns"
+        >
+          <glamorous(div)
+            className="column is-3"
+          >
+            <div
+              className="card"
+            >
+              <div
+                className="card-content"
+              >
+                <h2
+                  className="title is-size-3"
+                >
+                  Upload
+                </h2>
+                <glamorous(div)>
+                  Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                </glamorous(div)>
+                <form>
+                  <FileUpload
+                    uploadFile={[Function]}
+                  />
+                  <div
+                    className="field"
+                  >
+                    <label
+                      htmlFor="separator"
+                    >
+                      <strong>
+                        Separator
+                      </strong>
+                      <div
+                        className="control"
+                        id="separator"
+                      >
+                        <RadioButtons
+                          groupName="separator"
+                          initiallyChecked="commaSep"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "id": "commaSep",
+                                "name": "Comma",
+                              },
+                              Object {
+                                "id": "tabSep",
+                                "name": "Tab",
+                              },
+                              Object {
+                                "id": "semicolonSep",
+                                "name": "Semicolon",
+                              },
+                            ]
+                          }
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </glamorous(div)>
+          <glamorous(div)
+            className="column is-9"
+          >
+            <div
+              className="notification is-info"
+            >
+              Upload a file to get started!
+            </div>
+          </glamorous(div)>
+        </div>
+      </div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="columns"
+        >
+          <glamorous(div)
+            className="column is-3"
+          >
+            <div
+              className="card"
+            >
+              <div
+                className="card-content"
+              >
+                <h2
+                  className="title is-size-3"
+                >
+                  Upload
+                </h2>
+                <glamorous(div)>
+                  Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                </glamorous(div)>
+                <form>
+                  <FileUpload
+                    uploadFile={[Function]}
+                  />
+                  <div
+                    className="field"
+                  >
+                    <label
+                      htmlFor="separator"
+                    >
+                      <strong>
+                        Separator
+                      </strong>
+                      <div
+                        className="control"
+                        id="separator"
+                      >
+                        <RadioButtons
+                          groupName="separator"
+                          initiallyChecked="commaSep"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "id": "commaSep",
+                                "name": "Comma",
+                              },
+                              Object {
+                                "id": "tabSep",
+                                "name": "Tab",
+                              },
+                              Object {
+                                "id": "semicolonSep",
+                                "name": "Semicolon",
+                              },
+                            ]
+                          }
+                        />
+                      </div>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </glamorous(div)>
+          <glamorous(div)
+            className="column is-9"
+          >
+            <div
+              className="notification is-info"
+            >
+              Upload a file to get started!
+            </div>
+          </glamorous(div)>
+        </div>,
+        "className": "section",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <glamorous(div)
+              className="column is-3"
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-content"
+                >
+                  <h2
+                    className="title is-size-3"
+                  >
+                    Upload
+                  </h2>
+                  <glamorous(div)>
+                    Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                  </glamorous(div)>
+                  <form>
+                    <FileUpload
+                      uploadFile={[Function]}
+                    />
+                    <div
+                      className="field"
+                    >
+                      <label
+                        htmlFor="separator"
+                      >
+                        <strong>
+                          Separator
+                        </strong>
+                        <div
+                          className="control"
+                          id="separator"
+                        >
+                          <RadioButtons
+                            groupName="separator"
+                            initiallyChecked="commaSep"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "id": "commaSep",
+                                  "name": "Comma",
+                                },
+                                Object {
+                                  "id": "tabSep",
+                                  "name": "Tab",
+                                },
+                                Object {
+                                  "id": "semicolonSep",
+                                  "name": "Semicolon",
+                                },
+                              ]
+                            }
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </glamorous(div)>,
+            <glamorous(div)
+              className="column is-9"
+            >
+              <div
+                className="notification is-info"
+              >
+                Upload a file to get started!
+              </div>
+            </glamorous(div)>,
+          ],
+          "className": "columns",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <div
+                className="card"
+              >
+                <div
+                  className="card-content"
+                >
+                  <h2
+                    className="title is-size-3"
+                  >
+                    Upload
+                  </h2>
+                  <glamorous(div)>
+                    Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                  </glamorous(div)>
+                  <form>
+                    <FileUpload
+                      uploadFile={[Function]}
+                    />
+                    <div
+                      className="field"
+                    >
+                      <label
+                        htmlFor="separator"
+                      >
+                        <strong>
+                          Separator
+                        </strong>
+                        <div
+                          className="control"
+                          id="separator"
+                        >
+                          <RadioButtons
+                            groupName="separator"
+                            initiallyChecked="commaSep"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "id": "commaSep",
+                                  "name": "Comma",
+                                },
+                                Object {
+                                  "id": "tabSep",
+                                  "name": "Tab",
+                                },
+                                Object {
+                                  "id": "semicolonSep",
+                                  "name": "Semicolon",
+                                },
+                              ]
+                            }
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>,
+              "className": "column is-3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="card-content"
+                >
+                  <h2
+                    className="title is-size-3"
+                  >
+                    Upload
+                  </h2>
+                  <glamorous(div)>
+                    Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                  </glamorous(div)>
+                  <form>
+                    <FileUpload
+                      uploadFile={[Function]}
+                    />
+                    <div
+                      className="field"
+                    >
+                      <label
+                        htmlFor="separator"
+                      >
+                        <strong>
+                          Separator
+                        </strong>
+                        <div
+                          className="control"
+                          id="separator"
+                        >
+                          <RadioButtons
+                            groupName="separator"
+                            initiallyChecked="commaSep"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "id": "commaSep",
+                                  "name": "Comma",
+                                },
+                                Object {
+                                  "id": "tabSep",
+                                  "name": "Tab",
+                                },
+                                Object {
+                                  "id": "semicolonSep",
+                                  "name": "Semicolon",
+                                },
+                              ]
+                            }
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>,
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h2
+                      className="title is-size-3"
+                    >
+                      Upload
+                    </h2>,
+                    <glamorous(div)>
+                      Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                    </glamorous(div)>,
+                    <form>
+                      <FileUpload
+                        uploadFile={[Function]}
+                      />
+                      <div
+                        className="field"
+                      >
+                        <label
+                          htmlFor="separator"
+                        >
+                          <strong>
+                            Separator
+                          </strong>
+                          <div
+                            className="control"
+                            id="separator"
+                          >
+                            <RadioButtons
+                              groupName="separator"
+                              initiallyChecked="commaSep"
+                              onChange={[Function]}
+                              options={
+                                Array [
+                                  Object {
+                                    "id": "commaSep",
+                                    "name": "Comma",
+                                  },
+                                  Object {
+                                    "id": "tabSep",
+                                    "name": "Tab",
+                                  },
+                                  Object {
+                                    "id": "semicolonSep",
+                                    "name": "Semicolon",
+                                  },
+                                ]
+                              }
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </form>,
+                  ],
+                  "className": "card-content",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Upload",
+                      "className": "title is-size-3",
+                    },
+                    "ref": null,
+                    "rendered": "Upload",
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.",
+                    },
+                    "ref": null,
+                    "rendered": "Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <FileUpload
+                          uploadFile={[Function]}
+                        />,
+                        <div
+                          className="field"
+                        >
+                          <label
+                            htmlFor="separator"
+                          >
+                            <strong>
+                              Separator
+                            </strong>
+                            <div
+                              className="control"
+                              id="separator"
+                            >
+                              <RadioButtons
+                                groupName="separator"
+                                initiallyChecked="commaSep"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "id": "commaSep",
+                                      "name": "Comma",
+                                    },
+                                    Object {
+                                      "id": "tabSep",
+                                      "name": "Tab",
+                                    },
+                                    Object {
+                                      "id": "semicolonSep",
+                                      "name": "Semicolon",
+                                    },
+                                  ]
+                                }
+                              />
+                            </div>
+                          </label>
+                        </div>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "uploadFile": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <label
+                            htmlFor="separator"
+                          >
+                            <strong>
+                              Separator
+                            </strong>
+                            <div
+                              className="control"
+                              id="separator"
+                            >
+                              <RadioButtons
+                                groupName="separator"
+                                initiallyChecked="commaSep"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "id": "commaSep",
+                                      "name": "Comma",
+                                    },
+                                    Object {
+                                      "id": "tabSep",
+                                      "name": "Tab",
+                                    },
+                                    Object {
+                                      "id": "semicolonSep",
+                                      "name": "Semicolon",
+                                    },
+                                  ]
+                                }
+                              />
+                            </div>
+                          </label>,
+                          "className": "field",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <strong>
+                                Separator
+                              </strong>,
+                              <div
+                                className="control"
+                                id="separator"
+                              >
+                                <RadioButtons
+                                  groupName="separator"
+                                  initiallyChecked="commaSep"
+                                  onChange={[Function]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "id": "commaSep",
+                                        "name": "Comma",
+                                      },
+                                      Object {
+                                        "id": "tabSep",
+                                        "name": "Tab",
+                                      },
+                                      Object {
+                                        "id": "semicolonSep",
+                                        "name": "Semicolon",
+                                      },
+                                    ]
+                                  }
+                                />
+                              </div>,
+                            ],
+                            "htmlFor": "separator",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Separator",
+                              },
+                              "ref": null,
+                              "rendered": "Separator",
+                              "type": "strong",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": <RadioButtons
+                                  groupName="separator"
+                                  initiallyChecked="commaSep"
+                                  onChange={[Function]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "id": "commaSep",
+                                        "name": "Comma",
+                                      },
+                                      Object {
+                                        "id": "tabSep",
+                                        "name": "Tab",
+                                      },
+                                      Object {
+                                        "id": "semicolonSep",
+                                        "name": "Semicolon",
+                                      },
+                                    ]
+                                  }
+                                />,
+                                "className": "control",
+                                "id": "separator",
+                              },
+                              "ref": null,
+                              "rendered": Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "groupName": "separator",
+                                  "initiallyChecked": "commaSep",
+                                  "onChange": [Function],
+                                  "options": Array [
+                                    Object {
+                                      "id": "commaSep",
+                                      "name": "Comma",
+                                    },
+                                    Object {
+                                      "id": "tabSep",
+                                      "name": "Tab",
+                                    },
+                                    Object {
+                                      "id": "semicolonSep",
+                                      "name": "Semicolon",
+                                    },
+                                  ],
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              "type": "div",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        "type": "div",
+                      },
+                    ],
+                    "type": "form",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <div
+                className="notification is-info"
+              >
+                Upload a file to get started!
+              </div>,
+              "className": "column is-9",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Upload a file to get started!",
+                "className": "notification is-info",
+              },
+              "ref": null,
+              "rendered": "Upload a file to get started!",
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="section"
+        >
+          <div
+            className="columns"
+          >
+            <glamorous(div)
+              className="column is-3"
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-content"
+                >
+                  <h2
+                    className="title is-size-3"
+                  >
+                    Upload
+                  </h2>
+                  <glamorous(div)>
+                    Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                  </glamorous(div)>
+                  <form>
+                    <FileUpload
+                      uploadFile={[Function]}
+                    />
+                    <div
+                      className="field"
+                    >
+                      <label
+                        htmlFor="separator"
+                      >
+                        <strong>
+                          Separator
+                        </strong>
+                        <div
+                          className="control"
+                          id="separator"
+                        >
+                          <RadioButtons
+                            groupName="separator"
+                            initiallyChecked="commaSep"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "id": "commaSep",
+                                  "name": "Comma",
+                                },
+                                Object {
+                                  "id": "tabSep",
+                                  "name": "Tab",
+                                },
+                                Object {
+                                  "id": "semicolonSep",
+                                  "name": "Semicolon",
+                                },
+                              ]
+                            }
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </glamorous(div)>
+            <glamorous(div)
+              className="column is-9"
+            >
+              <div
+                className="notification is-info"
+              >
+                Upload a file to get started!
+              </div>
+            </glamorous(div)>
+          </div>
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="columns"
+          >
+            <glamorous(div)
+              className="column is-3"
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-content"
+                >
+                  <h2
+                    className="title is-size-3"
+                  >
+                    Upload
+                  </h2>
+                  <glamorous(div)>
+                    Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                  </glamorous(div)>
+                  <form>
+                    <FileUpload
+                      uploadFile={[Function]}
+                    />
+                    <div
+                      className="field"
+                    >
+                      <label
+                        htmlFor="separator"
+                      >
+                        <strong>
+                          Separator
+                        </strong>
+                        <div
+                          className="control"
+                          id="separator"
+                        >
+                          <RadioButtons
+                            groupName="separator"
+                            initiallyChecked="commaSep"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "id": "commaSep",
+                                  "name": "Comma",
+                                },
+                                Object {
+                                  "id": "tabSep",
+                                  "name": "Tab",
+                                },
+                                Object {
+                                  "id": "semicolonSep",
+                                  "name": "Semicolon",
+                                },
+                              ]
+                            }
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </glamorous(div)>
+            <glamorous(div)
+              className="column is-9"
+            >
+              <div
+                className="notification is-info"
+              >
+                Upload a file to get started!
+              </div>
+            </glamorous(div)>
+          </div>,
+          "className": "section",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <glamorous(div)
+                className="column is-3"
+              >
+                <div
+                  className="card"
+                >
+                  <div
+                    className="card-content"
+                  >
+                    <h2
+                      className="title is-size-3"
+                    >
+                      Upload
+                    </h2>
+                    <glamorous(div)>
+                      Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                    </glamorous(div)>
+                    <form>
+                      <FileUpload
+                        uploadFile={[Function]}
+                      />
+                      <div
+                        className="field"
+                      >
+                        <label
+                          htmlFor="separator"
+                        >
+                          <strong>
+                            Separator
+                          </strong>
+                          <div
+                            className="control"
+                            id="separator"
+                          >
+                            <RadioButtons
+                              groupName="separator"
+                              initiallyChecked="commaSep"
+                              onChange={[Function]}
+                              options={
+                                Array [
+                                  Object {
+                                    "id": "commaSep",
+                                    "name": "Comma",
+                                  },
+                                  Object {
+                                    "id": "tabSep",
+                                    "name": "Tab",
+                                  },
+                                  Object {
+                                    "id": "semicolonSep",
+                                    "name": "Semicolon",
+                                  },
+                                ]
+                              }
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </glamorous(div)>,
+              <glamorous(div)
+                className="column is-9"
+              >
+                <div
+                  className="notification is-info"
+                >
+                  Upload a file to get started!
+                </div>
+              </glamorous(div)>,
+            ],
+            "className": "columns",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <div
+                  className="card"
+                >
+                  <div
+                    className="card-content"
+                  >
+                    <h2
+                      className="title is-size-3"
+                    >
+                      Upload
+                    </h2>
+                    <glamorous(div)>
+                      Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                    </glamorous(div)>
+                    <form>
+                      <FileUpload
+                        uploadFile={[Function]}
+                      />
+                      <div
+                        className="field"
+                      >
+                        <label
+                          htmlFor="separator"
+                        >
+                          <strong>
+                            Separator
+                          </strong>
+                          <div
+                            className="control"
+                            id="separator"
+                          >
+                            <RadioButtons
+                              groupName="separator"
+                              initiallyChecked="commaSep"
+                              onChange={[Function]}
+                              options={
+                                Array [
+                                  Object {
+                                    "id": "commaSep",
+                                    "name": "Comma",
+                                  },
+                                  Object {
+                                    "id": "tabSep",
+                                    "name": "Tab",
+                                  },
+                                  Object {
+                                    "id": "semicolonSep",
+                                    "name": "Semicolon",
+                                  },
+                                ]
+                              }
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>,
+                "className": "column is-3",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="card-content"
+                  >
+                    <h2
+                      className="title is-size-3"
+                    >
+                      Upload
+                    </h2>
+                    <glamorous(div)>
+                      Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                    </glamorous(div)>
+                    <form>
+                      <FileUpload
+                        uploadFile={[Function]}
+                      />
+                      <div
+                        className="field"
+                      >
+                        <label
+                          htmlFor="separator"
+                        >
+                          <strong>
+                            Separator
+                          </strong>
+                          <div
+                            className="control"
+                            id="separator"
+                          >
+                            <RadioButtons
+                              groupName="separator"
+                              initiallyChecked="commaSep"
+                              onChange={[Function]}
+                              options={
+                                Array [
+                                  Object {
+                                    "id": "commaSep",
+                                    "name": "Comma",
+                                  },
+                                  Object {
+                                    "id": "tabSep",
+                                    "name": "Tab",
+                                  },
+                                  Object {
+                                    "id": "semicolonSep",
+                                    "name": "Semicolon",
+                                  },
+                                ]
+                              }
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </form>
+                  </div>,
+                  "className": "card",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h2
+                        className="title is-size-3"
+                      >
+                        Upload
+                      </h2>,
+                      <glamorous(div)>
+                        Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.
+                      </glamorous(div)>,
+                      <form>
+                        <FileUpload
+                          uploadFile={[Function]}
+                        />
+                        <div
+                          className="field"
+                        >
+                          <label
+                            htmlFor="separator"
+                          >
+                            <strong>
+                              Separator
+                            </strong>
+                            <div
+                              className="control"
+                              id="separator"
+                            >
+                              <RadioButtons
+                                groupName="separator"
+                                initiallyChecked="commaSep"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "id": "commaSep",
+                                      "name": "Comma",
+                                    },
+                                    Object {
+                                      "id": "tabSep",
+                                      "name": "Tab",
+                                    },
+                                    Object {
+                                      "id": "semicolonSep",
+                                      "name": "Semicolon",
+                                    },
+                                  ]
+                                }
+                              />
+                            </div>
+                          </label>
+                        </div>
+                      </form>,
+                    ],
+                    "className": "card-content",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Upload",
+                        "className": "title is-size-3",
+                      },
+                      "ref": null,
+                      "rendered": "Upload",
+                      "type": "h2",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.",
+                      },
+                      "ref": null,
+                      "rendered": "Upload a plain-text spreadsheet (CSV or TSV) containing your metabolites of interest in a single column, or try out our example dataset.",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <FileUpload
+                            uploadFile={[Function]}
+                          />,
+                          <div
+                            className="field"
+                          >
+                            <label
+                              htmlFor="separator"
+                            >
+                              <strong>
+                                Separator
+                              </strong>
+                              <div
+                                className="control"
+                                id="separator"
+                              >
+                                <RadioButtons
+                                  groupName="separator"
+                                  initiallyChecked="commaSep"
+                                  onChange={[Function]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "id": "commaSep",
+                                        "name": "Comma",
+                                      },
+                                      Object {
+                                        "id": "tabSep",
+                                        "name": "Tab",
+                                      },
+                                      Object {
+                                        "id": "semicolonSep",
+                                        "name": "Semicolon",
+                                      },
+                                    ]
+                                  }
+                                />
+                              </div>
+                            </label>
+                          </div>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "uploadFile": [Function],
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <label
+                              htmlFor="separator"
+                            >
+                              <strong>
+                                Separator
+                              </strong>
+                              <div
+                                className="control"
+                                id="separator"
+                              >
+                                <RadioButtons
+                                  groupName="separator"
+                                  initiallyChecked="commaSep"
+                                  onChange={[Function]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "id": "commaSep",
+                                        "name": "Comma",
+                                      },
+                                      Object {
+                                        "id": "tabSep",
+                                        "name": "Tab",
+                                      },
+                                      Object {
+                                        "id": "semicolonSep",
+                                        "name": "Semicolon",
+                                      },
+                                    ]
+                                  }
+                                />
+                              </div>
+                            </label>,
+                            "className": "field",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <strong>
+                                  Separator
+                                </strong>,
+                                <div
+                                  className="control"
+                                  id="separator"
+                                >
+                                  <RadioButtons
+                                    groupName="separator"
+                                    initiallyChecked="commaSep"
+                                    onChange={[Function]}
+                                    options={
+                                      Array [
+                                        Object {
+                                          "id": "commaSep",
+                                          "name": "Comma",
+                                        },
+                                        Object {
+                                          "id": "tabSep",
+                                          "name": "Tab",
+                                        },
+                                        Object {
+                                          "id": "semicolonSep",
+                                          "name": "Semicolon",
+                                        },
+                                      ]
+                                    }
+                                  />
+                                </div>,
+                              ],
+                              "htmlFor": "separator",
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Separator",
+                                },
+                                "ref": null,
+                                "rendered": "Separator",
+                                "type": "strong",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": <RadioButtons
+                                    groupName="separator"
+                                    initiallyChecked="commaSep"
+                                    onChange={[Function]}
+                                    options={
+                                      Array [
+                                        Object {
+                                          "id": "commaSep",
+                                          "name": "Comma",
+                                        },
+                                        Object {
+                                          "id": "tabSep",
+                                          "name": "Tab",
+                                        },
+                                        Object {
+                                          "id": "semicolonSep",
+                                          "name": "Semicolon",
+                                        },
+                                      ]
+                                    }
+                                  />,
+                                  "className": "control",
+                                  "id": "separator",
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "groupName": "separator",
+                                    "initiallyChecked": "commaSep",
+                                    "onChange": [Function],
+                                    "options": Array [
+                                      Object {
+                                        "id": "commaSep",
+                                        "name": "Comma",
+                                      },
+                                      Object {
+                                        "id": "tabSep",
+                                        "name": "Tab",
+                                      },
+                                      Object {
+                                        "id": "semicolonSep",
+                                        "name": "Semicolon",
+                                      },
+                                    ],
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": [Function],
+                                },
+                                "type": "div",
+                              },
+                            ],
+                            "type": "label",
+                          },
+                          "type": "div",
+                        },
+                      ],
+                      "type": "form",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <div
+                  className="notification is-info"
+                >
+                  Upload a file to get started!
+                </div>,
+                "className": "column is-9",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Upload a file to get started!",
+                  "className": "notification is-info",
+                },
+                "ref": null,
+                "rendered": "Upload a file to get started!",
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

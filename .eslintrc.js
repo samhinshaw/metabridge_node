@@ -26,7 +26,8 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton']
       }
     ],
-    'no-underscore-dangle': ['error', { allow: ['_react_id'] }]
+    'no-underscore-dangle': ['error', { allow: ['_react_id'] }],
+    'jsx-a11y/label-has-for': false
   },
   globals: {
     Rollbar: true
